@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: rgb(255, 255, 255);
+		}
+
+		h2 {
+			background: -webkit-linear-gradient(45deg, #f3ec78, #af4261);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			color: black;
+			text-align: center;
+			font-size: 2em;
+			padding: 20px;
+		}
+
+		.quiz {
+			width: 50%;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			background-color: white;
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			padding: 12px;
+			margin-bottom: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 1em;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.message {
+			color: white;
+			padding: 10px;
+			margin-bottom: 15px;
+		}
+
+		.success {
+			background-color: #4CAF50;
+		}
+
+		.error {
+			background-color: #f44336;
+		}
+	</style>
+
+	<!-- Quiz Name / Title -->
+	<meta charset="UTF-8">
+	<title>WebQuiz V0.1</title>
+</head>
+
+<body>
+	<h2>Welcome to WebQuiz V0.1!</h2>
+
+	<script>
+		if (new URL(window.location.href).searchParams.get('success') === 'true') {
+			var successDiv = document.createElement('div');
+			successDiv.className = 'message success';
+			successDiv.textContent = 'Operation Successful!';
+			document.body.insertBefore(successDiv, document.body.firstChild);
+		}
+		if (new URL(window.location.href).searchParams.get('SQLFail') === 'true') {
+			var successDiv = document.createElement('div');
+			successDiv.className = 'message error';
+			successDiv.textContent = 'SQL Connection Failed!';
+			document.body.insertBefore(successDiv, document.body.firstChild);
+		}
+	</script>
+
+
+	<div class="quiz">
+		<button onclick="location.href='quiz1.html'">Quiz 1</button>
+		<p>Quiz 1 is about general knowledge.</p>
+		<button onclick="location.href='quiz2.html'">Quiz 2</button>
+		<p>Quiz 2 is about history.</p>
+		<button onclick="location.href='quiz3.html'">Quiz 3</button>
+		<p>Quiz 3 is about science.</p>
+	</div>
+</body>
+
+</html>
