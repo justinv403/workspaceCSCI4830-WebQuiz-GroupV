@@ -68,21 +68,21 @@
 		}
 
 		/* Styles for the view button */
-        .view-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #3498db;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+		.view-button {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background-color: #3498db;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
 
-        .view-button:hover {
-            background-color: #2980b9;
-        }
+		.view-button:hover {
+			background-color: #2980b9;
+		}
 
 		/* Styles for text boxes */
 		label {
@@ -117,7 +117,7 @@
 			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz1";
 		}
 	</script>
-	
+
 	<!-- Quiz Name / Title -->
 	<meta charset="UTF-8">
 	<title>Quiz 1</title>
@@ -135,15 +135,82 @@
 		<label for="lastName">Last Name:</label>
 		<input type="text" id="lastName" name="lastName" required>
 
+
+		<!--Quiz 1 - Omaha History and Inspiring People-->
+
 		<div class="question">
-			<p>Question 1: What is the capital of France?</p>
-			<input type="radio" name="integer0" value="1">Paris<br>
-			<input type="radio" name="integer0" value="0">London<br>
+			<p>Question 1: In what year was Omaha founded when the majority of the land given by the Omaha tribe?</p>
+			<input type="radio" name="integer0" value="0">1904<br>
+			<input type="radio" name="integer0" value="0">1876<br>
+			<input type="radio" name="integer0" value="1">1854<br> <!--Answer-->
+			<input type="radio" name="integer0" value="0">1804<br>
 		</div>
 		<div class="question">
-			<p>Question 2: What is the capital of England?</p>
-			<input type="radio" name="integer1" value="1">London<br>
-			<input type="radio" name="integer1" value="0">Paris<br>
+			<p>Question 2: President Gerald R. Ford from 1974 - 1977 was born in Omaha Nebraska and was famous for his
+				economy saving efforts in these years was the ___ President of the United States?</p>
+			<input type="radio" name="integer1" value="1">38th<br> <!--Answer-->
+			<input type="radio" name="integer1" value="0">30th<br>
+			<input type="radio" name="integer1" value="0">42th<br>
+			<input type="radio" name="integer1" value="0">34th<br>
+		</div>
+		<div class="question">
+			<p>Question 3: Omaha became a transportation hub in the 19th century when which of these companies was
+				commishined by the US Government to build railroads stretching out to the West from the Missouri River?
+			</p>
+			<input type="radio" name="integer2" value="0">West Pacific<br>
+			<input type="radio" name="integer2" value="0">Omaha Rail<br>
+			<input type="radio" name="integer2" value="1">Union Pacific<br> <!--Answer-->
+			<input type="radio" name="integer2" value="0">Central Pacific<br>
+		</div>
+		<div class="question">
+			<p>Question 4: Which civil rights movement leader and human rights activist was born in Omaha?</p>
+			<input type="radio" name="integer3" value="0">John Lewis<br>
+			<input type="radio" name="integer3" value="0">Thurgood Marshall<br>
+			<input type="radio" name="integer3" value="0">Martin Luther King Jr.<br>
+			<input type="radio" name="integer3" value="1">Malcolm X<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<p>Question 5: The annual NCAA College World Series is hosted in downtown Omaha and attracts many tourists,
+				is held in which month of the year?</p>
+			<input type="radio" name="integer4" value="1">June<br> <!--Answer-->
+			<input type="radio" name="integer4" value="0">August<br>
+			<input type="radio" name="integer4" value="0">May<br>
+			<input type="radio" name="integer4" value="0">July<br>
+		</div>
+		<div class="question">
+			<p>Question 6: Is the Omaha Community Playhouse is the largest community theater in the United States?</p>
+			<input type="radio" name="integer5" value="1">True<br> <!--Answer-->
+			<input type="radio" name="integer5" value="0">False<br>
+		</div>
+		<div class="question">
+			<p>Question 7: Which Omaha Businessman and Philanthropist is the CEO of Fortune 500 company, and his
+				business success has made an impact on the Omaha community?</p>
+			<input type="radio" name="integer6" value="0">Bill Gates<br>
+			<input type="radio" name="integer6" value="1">Warren Buffett<br> <!--Answer-->
+			<input type="radio" name="integer6" value="0">Mark Cuban<br>
+			<input type="radio" name="integer6" value="0">Elon Musk<br>
+		</div>
+		<div class="question">
+			<p>Question 8: The Omaha Native American tribe is where the cities name comes from but what does "Omaha"
+				mean?</p>
+			<input type="radio" name="integer7" value="1">Upstream people<br> <!--Answer-->
+			<input type="radio" name="integer7" value="0">Downstream people<br>
+		</div>
+		<div class="question">
+			<p>Question 9: Offutt US military base is the headquarters of the US Strategic Command and is the largest
+				employer in Omaha, what is the military branch that Offutt Base belongs to?</p>
+			<input type="radio" name="integer8" value="0">Navy<br>
+			<input type="radio" name="integer8" value="0">Marines<br>
+			<input type="radio" name="integer8" value="0">Army<br>
+			<input type="radio" name="integer8" value="1">Air Force<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<p>Question 10: Omaha is home to how many Fortune 500 companies that are important in driving the cities
+				economy?</p>
+			<input type="radio" name="integer9" value="0">5<br>
+			<input type="radio" name="integer9" value="1">4<br> <!--Answer-->
+			<input type="radio" name="integer9" value="0">3<br>
+			<input type="radio" name="integer9" value="0">0<br>
 		</div>
 		<!-- Add more questions in the same format -->
 
