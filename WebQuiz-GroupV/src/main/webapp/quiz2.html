@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Your Title</title>
+	<link rel="stylesheet" href="quiz.css"> <!-- Linking to the external CSS file -->
+	
+	<script>
+		function confirmSubmit() {
+			return window.confirm("Are you sure you want to submit the quiz?");
+		}
+
+		function confirmBack() {
+			return window.confirm("Are you sure you want to go back to the Quiz Landing page?");
+		}
+
+		function redirectToQuizLanding() {
+			if (confirmBack()) {
+				window.location.href = "QuizLanding.html";
+			}
+		}
+		function redirectToView() {
+			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz1";
+		}
+	</script>
+
+	<!-- Quiz Name / Title -->
+	<meta charset="UTF-8">
+	<title>Quiz 2</title>
+</head>
+
+<body>
+	<button class="back-button" onclick="redirectToQuizLanding()"><span>&#8592;</span> Back to Quiz Landing</button>
+
+	<h1>Quiz 2 - History</h1>
+	<form action="QuizProcessorServlet" method="post" onsubmit="return confirmSubmit();">
+		<!-- Input fields for first name and last name -->
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" name="firstName" required>
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" name="lastName" required>
+
+		<div class="question">
+			<p>Question 1: What is the capital of France?</p>
+			<input type="radio" name="integer0" value="1">Paris<br>
+			<input type="radio" name="integer0" value="0">London<br>
+		</div>
+		<div class="question">
+			<p>Question 2: What is the capital of England?</p>
+			<input type="radio" name="integer1" value="1">London<br>
+			<input type="radio" name="integer1" value="0">Paris<br>
+		</div>
+		<!-- Add more questions in the same format -->
+
+		<!-- hidden submit value for the quiz -->
+		<input type="hidden" name="action" value="submit">
+		<input type="submit" value="Submit Quiz">
+
+		<!-- view button -->
+		<button class="view-button" onclick="redirectToView()">View Results</button>
+
+		<!-- extra hidden information -->
+		<input type="hidden" name="quizName" value="quiz2">
+	</form>
+</body>
+
+</html>

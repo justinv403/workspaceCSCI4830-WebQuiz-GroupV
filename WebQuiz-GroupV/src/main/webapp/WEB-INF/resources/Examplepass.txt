@@ -1,0 +1,3 @@
+www.yourURL.com:3306/groupVQuizDB
+sqlUsername
+sqlPassword

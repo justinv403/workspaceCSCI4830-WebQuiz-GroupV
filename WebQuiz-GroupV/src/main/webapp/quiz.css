@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+h1 {
+	background: -webkit-linear-gradient(45deg, #f3ec78, #af4261);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: black;
+	text-align: center;
+	font-size: 2em;
+	padding: 20px;
+}
+
+form {
+	width: 70%;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: white;
+	transition: width 0.5s ease;
+	/* Smooth transition effect */
+}
+
+@media screen and (max-width: 1200px) {
+	form {
+		width: 80%;
+		/* Adjust the width for smaller screens */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	form {
+		width: 90%;
+		/* Further adjust the width for smaller screens */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	form {
+		width: 95%;
+		/* Adjust for even smaller screens */
+	}
+}
+
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.back-button,
+.view-button {
+	position: absolute;
+	top: 10px;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	color: white;
+}
+
+.back-button {
+	left: 10px;
+	background-color: #007bff;
+}
+
+.back-button:hover {
+	background-color: #007bff;
+}
+
+.view-button {
+	right: 10px;
+	background-color: #007bff;
+}
+
+.view-button:hover {
+	background-color: #007bff;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#lastName {
+	margin-bottom: 20px;
+}
+
+.question-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.question-number {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.question {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-radius: 4px;
+}
+
+.point-value {
+	font-weight: bold;
+	color: #333;
+}
