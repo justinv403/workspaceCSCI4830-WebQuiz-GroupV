@@ -104,12 +104,20 @@ public class QuizProcessorServlet extends HttpServlet {
 			// if SQL database connection is successful, display SQL results to user
 			ResultSet rs = null;
 			String quizName = request.getParameter("quizName");
+			System.out.println("Getting score results from " + quizName);
 			rs = viewDatabaseAction(conn, quizName);
-			drawHTMLTablePage(response, quizName, rs);
+			
+			if(rs != null) {
+				drawHTMLTablePage(response, quizName, rs);
+			} else {
+				cleanClose("QuizLanding.html?SQLFail=true", conn, response);
+			}
+			
 		}
 		
-		
-		cleanClose("NONE", conn, response);
+		/*if(conn != null && response != null) {
+			cleanClose("QuizLanding.html", conn, response);
+		}*/
 		
 	}
 	
