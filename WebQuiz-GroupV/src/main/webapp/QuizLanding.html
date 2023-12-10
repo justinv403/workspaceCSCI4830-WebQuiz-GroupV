@@ -55,10 +55,16 @@
 			margin: auto;
 			padding: 20px;
 			border: 1px solid #ccc;
-			border-radius: 4px;
+			border-radius: 8px;
 			background-color: white;
 			transition: width 0.5s ease;
 			/* Smooth transition effect for width change */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.quizButton {
+			padding: 20px;
+			margin: auto;
 		}
 
 		button {
@@ -105,7 +111,7 @@
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			margin-top: 20px;
 		}
-		
+
 		.content-with-message .about-button {
 			position: fixed;
 			top: 80px;
@@ -120,6 +126,7 @@
 			padding: 10px;
 			margin-bottom: 20px;
 			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
 
 		.message.success {
@@ -130,6 +137,19 @@
 			padding: 10px;
 			margin-bottom: 20px;
 			border-radius: 8px;
+		}
+
+		.version {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			background-color: #fff;
+			padding: 0px 15px;
+			border-radius: 8px;
+			border: 1px solid #ccc;
+			z-index: 999;
+			font-size: 14px;
+			font-family: Arial, sans-serif;
 		}
 
 		@media screen and (max-width: 768px) {
@@ -177,17 +197,28 @@
 	</div>
 
 	<div class="title-header">
-		<h2>Welcome to WebQuiz V0.1!</h2>
+		<h2>Welcome to TriviaOmaha!</h2>
 	</div>
 
 
 	<div class="quiz">
-		<button onclick="location.href='quiz1.html'">Quiz 1</button>
-		<p>Quiz 1 is about Omaha history and people.</p>
-		<button onclick="location.href='quiz2.html'">Quiz 2</button>
-		<p>Quiz 2 is about the University of Nebraska at Omaha.</p>
-		<button onclick="location.href='quiz3.html'">Quiz 3</button>
-		<p>Quiz 3 is about science.</p>
+		<div class="quizButton">
+			<button onclick="location.href='quiz1.html'">Quiz 1</button>
+			<p>Quiz 1 is about Omaha History and People.</p>
+		</div>
+		<div class="quizButton">
+			<button onclick="location.href='quiz2.html'">Quiz 2</button>
+			<p>Quiz 2 is about the University of Nebraska at Omaha.</p>
+		</div>
+		<div class="quizButton">
+			<button onclick="location.href='quiz3.html'">Quiz 3</button>
+			<p>Quiz 3 is about Nebraska History and Culture.</p>
+		</div>
+
+	</div>
+
+	<div class="version">
+		<p>v1.0</p>
 	</div>
 
 

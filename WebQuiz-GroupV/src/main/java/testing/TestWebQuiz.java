@@ -116,8 +116,27 @@ public class TestWebQuiz {
 		driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
 	}
 
-	//@Test
+	@Test
 	public void testSubmitQuiz3() throws Exception {
+		driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+		driver.findElement(By.xpath("//button[@onclick=\"location.href='quiz3.html'\"]")).click();
+		driver.get("http://localhost:8080/WebQuiz-GroupV/quiz3.html");
+		driver.findElement(By.id("firstName")).click();
+		driver.findElement(By.id("firstName")).clear();
+		driver.findElement(By.id("firstName")).sendKeys("test");
+		driver.findElement(By.id("lastName")).clear();
+		driver.findElement(By.id("lastName")).sendKeys("userAutomated");
+		driver.findElement(By.name("integer0")).click();
+		driver.findElement(By.name("integer1")).click();
+		driver.findElement(By.name("integer2")).click();
+		driver.findElement(By.name("integer3")).click();
+		driver.findElement(By.name("integer4")).click();
+		driver.findElement(By.name("integer5")).click();
+		driver.findElement(By.name("integer6")).click();
+		driver.findElement(By.name("integer7")).click();
+		acceptNextAlert = true;
+		driver.findElement(By.name("integer8")).click();
+		driver.findElement(By.xpath("//input[@value='Submit Quiz']")).click();
 		// assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to
 		// submit the quiz[\\s\\S]$"));
 		try {
@@ -233,7 +252,73 @@ public class TestWebQuiz {
 		}
 	    driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
 	}
+	
+	@Test
+	public void testNoNameQuiz1() throws Exception {
+		driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	    driver.findElement(By.xpath("//button[@onclick=\"location.href='quiz1.html'\"]")).click();
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/quiz1.html");
+	    acceptNextAlert = true;
+	    driver.findElement(By.xpath("//input[@value='Submit Quiz']")).click();
+	    driver.findElement(By.xpath("//button[@onclick='redirectToQuizLanding()']")).click();
+	    try {
+			// Switch to the alert
+			Alert alert = driver.switchTo().alert();
 
+			// Accept the alert
+			alert.accept();
+
+			Thread.sleep(500);
+		} catch (NoAlertPresentException e) {
+			// Handle the case where there is no alert present
+		}
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	}
+	
+	@Test
+	public void testNoNameQuiz2() throws Exception {
+		driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	    driver.findElement(By.xpath("//button[@onclick=\"location.href='quiz2.html'\"]")).click();
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/quiz2.html");
+	    acceptNextAlert = true;
+	    driver.findElement(By.xpath("//input[@value='Submit Quiz']")).click();
+	    driver.findElement(By.xpath("//button[@onclick='redirectToQuizLanding()']")).click();
+	    try {
+			// Switch to the alert
+			Alert alert = driver.switchTo().alert();
+
+			// Accept the alert
+			alert.accept();
+
+			Thread.sleep(500);
+		} catch (NoAlertPresentException e) {
+			// Handle the case where there is no alert present
+		}
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	}
+	
+	@Test
+	public void testNoNameQuiz3() throws Exception {
+		driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	    driver.findElement(By.xpath("//button[@onclick=\"location.href='quiz3.html'\"]")).click();
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/quiz3.html");
+	    acceptNextAlert = true;
+	    driver.findElement(By.xpath("//input[@value='Submit Quiz']")).click();
+	    driver.findElement(By.xpath("//button[@onclick='redirectToQuizLanding()']")).click();
+	    try {
+			// Switch to the alert
+			Alert alert = driver.switchTo().alert();
+
+			// Accept the alert
+			alert.accept();
+
+			Thread.sleep(500);
+		} catch (NoAlertPresentException e) {
+			// Handle the case where there is no alert present
+		}
+	    driver.get("http://localhost:8080/WebQuiz-GroupV/QuizLanding.html");
+	}
+	
 	@After
 	public void tearDown() throws Exception {
 		driver.quit();
