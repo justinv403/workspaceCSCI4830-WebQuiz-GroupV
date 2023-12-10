@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Your Title</title>
+	<title>Quiz 2</title>
 	<link rel="stylesheet" href="quiz.css"> <!-- Linking to the external CSS file -->
-	
+
 	<script>
 		function confirmSubmit() {
 			return window.confirm("Are you sure you want to submit the quiz?");
@@ -21,7 +21,7 @@
 			}
 		}
 		function redirectToView() {
-			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz1";
+			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz2";
 		}
 	</script>
 
@@ -33,7 +33,7 @@
 <body>
 	<button class="back-button" onclick="redirectToQuizLanding()"><span>&#8592;</span> Back to Quiz Landing</button>
 
-	<h1>Quiz 2 - History</h1>
+	<h1>Quiz 2 - University of Nebraska Omaha</h1>
 	<form action="QuizProcessorServlet" method="post" onsubmit="return confirmSubmit();">
 		<!-- Input fields for first name and last name -->
 		<label for="firstName">First Name:</label>
@@ -43,14 +43,103 @@
 		<input type="text" id="lastName" name="lastName" required>
 
 		<div class="question">
-			<p>Question 1: What is the capital of France?</p>
-			<input type="radio" name="integer0" value="1">Paris<br>
-			<input type="radio" name="integer0" value="0">London<br>
+			<div class="question-header">
+				<span class="question-number">Question 1:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>While UNO was founded in 1908, in what year did UNO become a public institution and the first
+				university in Omaha?</p>
+			<input type="radio" name="integer0" value="0">1960<br>
+			<input type="radio" name="integer0" value="0">1950<br>
+			<input type="radio" name="integer0" value="0">1940<br>
+			<input type="radio" name="integer0" value="20">1930<br> <!--Answer-->
 		</div>
 		<div class="question">
-			<p>Question 2: What is the capital of England?</p>
-			<input type="radio" name="integer1" value="1">London<br>
-			<input type="radio" name="integer1" value="0">Paris<br>
+			<div class="question-header">
+				<span class="question-number">Question 2:</span>
+				<span class="point-value">10 points</span>
+			</div>
+			<p>True or False, UNO is committed to civic engagement, with this students have served a total
+				of 300,000+ hours of volunteerism throught community projects in the Omaha area?</p>
+			<input type="radio" name="integer1" value="10">True<br> <!--Answer-->
+			<input type="radio" name="integer1" value="0">False<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 3:</span>
+				<span class="point-value">10 points</span>
+			</div>
+			<p>True or False, UNO has always been located in the middle of Omaha at 60th and Dodge?</p>
+			<input type="radio" name="integer2" value="0">True<br>
+			<input type="radio" name="integer2" value="10">False<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 4:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>How many different sports does UNO compete at the NCAA Division 1 level?</p>
+			<input type="radio" name="integer3" value="0">30<br>
+			<input type="radio" name="integer3" value="20">15<br> <!--Answer-->
+			<input type="radio" name="integer3" value="0">10<br>
+			<input type="radio" name="integer3" value="0">5<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 5:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>There are 6 different internal colleges at UNO, this includes; arts and science,
+				communication, education, and public affairs. What are the last two colleges?</p>
+			<input type="radio" name="integer4" value="0">Biomechanics, Business Administration<br>
+			<input type="radio" name="integer4" value="0">Business Administration, Accounting<br>
+			<input type="radio" name="integer4" value="0">Engineering, Information Science and Technology<br>
+			<input type="radio" name="integer4" value="20">Information Science and Technology, Business
+			Administration<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 6:</span>
+				<span class="point-value">10 points</span>
+			</div>
+			<p>True or False, there are over 200 majors and programs at UNO for students to choose from?</p>
+			<input type="radio" name="integer5" value="10">True<br> <!--Answer-->
+			<input type="radio" name="integer5" value="0">False<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 7:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>In 1968, UNO alumni Marlin Briscoe became the first starting African American quarterback in
+				professional football. What professional team did Marlin Briscoe start for?</p>
+			<input type="radio" name="integer6" value="20">Denver Broncos<br> <!--Answer-->
+			<input type="radio" name="integer6" value="0">Kansas City Chiefs<br>
+			<input type="radio" name="integer6" value="0">Green Bay Packers<br>
+			<input type="radio" name="integer6" value="0">Chicago Bears<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 8:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Question 8: How many different groups or clubs are supported on the UNO campus, giving students a chance
+				to find one that fits?</p>
+			<input type="radio" name="integer7" value="20">200+<br> <!--Answer-->
+			<input type="radio" name="integer7" value="0">150<br>
+			<input type="radio" name="integer7" value="0">100<br>
+			<input type="radio" name="integer7" value="0">75<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 9:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Question 9: How many students make up the student-body at UNO?</p>
+			<input type="radio" name="integer8" value="0">7,500<br>
+			<input type="radio" name="integer8" value="0">10,000<br>
+			<input type="radio" name="integer8" value="20">15,000<br> <!--Answer-->
+			<input type="radio" name="integer8" value="0">25,000<br>
 		</div>
 		<!-- Add more questions in the same format -->
 

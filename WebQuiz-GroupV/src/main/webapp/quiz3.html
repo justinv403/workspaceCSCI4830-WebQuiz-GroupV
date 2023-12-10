@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Your Title</title>
+	<title>Quiz 3</title>
 	<link rel="stylesheet" href="quiz.css"> <!-- Linking to the external CSS file -->
-	
+
 	<script>
 		function confirmSubmit() {
 			return window.confirm("Are you sure you want to submit the quiz?");
@@ -21,7 +21,7 @@
 			}
 		}
 		function redirectToView() {
-			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz1";
+			window.location.href = "QuizProcessorServlet?action=view&quizName=quiz3";
 		}
 	</script>
 
@@ -33,7 +33,7 @@
 <body>
 	<button class="back-button" onclick="redirectToQuizLanding()"><span>&#8592;</span> Back to Quiz Landing</button>
 
-	<h1>Quiz 3 - Science</h1>
+	<h1>Quiz 3 - Nebraska History and Culture</h1>
 	<form action="QuizProcessorServlet" method="post" onsubmit="return confirmSubmit();">
 		<!-- Input fields for first name and last name -->
 		<label for="firstName">First Name:</label>
@@ -43,14 +43,107 @@
 		<input type="text" id="lastName" name="lastName" required>
 
 		<div class="question">
-			<p>Question 1: What is the capital of France?</p>
-			<input type="radio" name="integer0" value="1">Paris<br>
-			<input type="radio" name="integer0" value="0">London<br>
+			<div class="question-header">
+				<span class="question-number">Question 1:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Nebraska is located in the heart of the United States, this region is known as the Midwest. Including
+				Nebraska, how many Midwest states are there in the United States?</p>
+			<input type="radio" name="integer0" value="0">6<br>
+			<input type="radio" name="integer0" value="0">8<br>
+			<input type="radio" name="integer0" value="0">10<br>
+			<input type="radio" name="integer0" value="20">12<br> <!--Answer-->
 		</div>
 		<div class="question">
-			<p>Question 2: What is the capital of England?</p>
-			<input type="radio" name="integer1" value="1">London<br>
-			<input type="radio" name="integer1" value="0">Paris<br>
+			<div class="question-header">
+				<span class="question-number">Question 2:</span>
+				<span class="point-value">10 points</span>
+			</div>
+			<p>True or False, Nebraska surpassed of population of 2 million as of 2023?</p>
+			<input type="radio" name="integer1" value="0">True<br>
+			<input type="radio" name="integer1" value="10">False<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 3:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Nebraska officially became a state in 1867, right after the end of the civil war. Nebraska is the ___
+				state admitted to the United States?</p>
+			<input type="radio" name="integer2" value="0">34th<br>
+			<input type="radio" name="integer2" value="20">37th<br> <!--Answer-->
+			<input type="radio" name="integer2" value="0">40th<br>
+			<input type="radio" name="integer2" value="0">43rd<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 4:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Before Nebraska became a state, the area was apart of the Louisana Purchase, this land was acquired by
+				the United States in 1803 from what country?</p>
+			<input type="radio" name="integer3" value="0">Spain<br>
+			<input type="radio" name="integer3" value="0">England<br>
+			<input type="radio" name="integer3" value="20">France<br> <!--Answer-->
+			<input type="radio" name="integer3" value="0">Germany<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 5:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>When it comes to voting for a President in the United States, each state gets a set amount of electoral
+				votes to use. However, 48 of the states must dedicate all of there votes to one canditate, only two
+				states can split their votes between candidates, Nebraska and ___?</p>
+			<input type="radio" name="integer4" value="20">Maine<br> <!--Answer-->
+			<input type="radio" name="integer4" value="0">Texas<br>
+			<input type="radio" name="integer4" value="0">Florida<br>
+			<input type="radio" name="integer4" value="0">California<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 6:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Nebraska is well-known for its successful college football team, the Nebraska Cornhuskers. So successful
+				that the football team has won how many National Championships?</p>
+			<input type="radio" name="integer5" value="0">2<br>
+			<input type="radio" name="integer5" value="0">3<br>
+			<input type="radio" name="integer5" value="0">10<br>
+			<input type="radio" name="integer5" value="20">5<br> <!--Answer-->
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 7:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>How many public universities makeup Nebraska's University system?</p>
+			<input type="radio" name="integer6" value="0">2<br>
+			<input type="radio" name="integer6" value="0">3<br>
+			<input type="radio" name="integer6" value="20">4<br> <!--Answer-->
+			<input type="radio" name="integer6" value="0">6<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 8:</span>
+				<span class="point-value">20 points</span>
+			</div>
+			<p>Which interstate highway stretches from Western to Eastern Nebraska tracing numerous historic sites along
+				the way throughout the state?</p>
+			<input type="radio" name="integer7" value="0">I-29<br>
+			<input type="radio" name="integer7" value="20">I-80<br> <!--Answer-->
+			<input type="radio" name="integer7" value="0">I-70<br>
+			<input type="radio" name="integer7" value="0">I-90<br>
+		</div>
+		<div class="question">
+			<div class="question-header">
+				<span class="question-number">Question 9:</span>
+				<span class="point-value">10 points</span>
+			</div>
+			<p>Chimney Rock is a national historic site located in Nebraska. Chimney Rock is rock formation in the
+				middle of Western Nebraska. True or False, Chimney Rock is nearly 300 feet tall?</p>
+			<input type="radio" name="integer8" value="10">True<br> <!--Answer-->
+			<input type="radio" name="integer8" value="0">False<br>
 		</div>
 		<!-- Add more questions in the same format -->
 
